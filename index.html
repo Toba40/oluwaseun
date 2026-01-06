@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OLUWASEUN REPAIR TECH | Phone & Laptop Experts in Ile-Ife</title>
+  <meta name="description" content="Professional phone and laptop repairs, buying, selling, and swapping services in Ile-Ife, Osun State. Fast, reliable, and affordable tech solutions."/>
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #eee;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: #00ffcc; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #00ccaa; }
+
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+    /* Navigation */
+    header {
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,255,200,0.2);
+    }
+    nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4%;
+    }
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #00ffcc, #00aaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links a {
+      margin-left: 2.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    .nav-links a:hover { transform: translateY(-3px); }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://thumbs.dreamstime.com/b/abstract-blue-purple-digital-wave-futuristic-technology-background-website-banner-explore-mesmerizing-beauty-abstract-357662645.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(0,255,200,0.15), transparent 70%);
+    }
+    .hero-content {
+      z-index: 2;
+      max-width: 900px;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #00ffcc, #00aaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 20px #00ffcc; }
+      to { text-shadow: 0 0 40px #00aaff, 0 0 60px #00ffcc; }
+    }
+    .hero p {
+      font-size: 1.8rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #00ffcc, #00aaff);
+      color: #000;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0,255,200,0.4);
+      transition: all 0.4s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,255,200,0.6);
+    }
+
+    /* Sections */
+    section {
+      padding: 8rem 4%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 3.5rem;
+      margin-bottom: 4rem;
+      background: linear-gradient(90deg, #00ffcc, #00aaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Services */
+    #services { background: rgba(0,0,0,0.4); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: all 0.4s;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(0,255,200,0.2);
+    }
+    .service-card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 20px 50px rgba(0,255,200,0.3);
+    }
+    .service-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .service-info {
+      padding: 2rem;
+      text-align: center;
+    }
+    .service-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00ffcc;
+    }
+
+    /* About */
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      flex-wrap: wrap;
+    }
+    .about-img {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,255,200,0.3);
+    }
+    .about-img img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s;
+    }
+    .about-img:hover img { transform: scale(1.1); }
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+      font-size: 1.2rem;
+    }
+
+    /* Location & Contact */
+    #contact {
+      background: rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .contact-item {
+      background: rgba(0,255,200,0.1);
+      padding: 2rem;
+      border-radius: 15px;
+      border: 1px solid #00ffcc;
+    }
+    .contact-item i { font-size: 2.5rem; color: #00ffcc; margin-bottom: 1rem; }
+    .contact-item a { display: block; font-size: 1.4rem; margin: 0.5rem 0; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem;
+      background: #000;
+      font-size: 1.1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .hero p { font-size: 1.4rem; }
+      h2 { font-size: 2.8rem; }
+      .nav-links { display: none; } /* Add hamburger later if needed */
+      #about { flex-direction: column; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">OLUWASEUN REPAIR TECH</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>OLUWASEUN REPAIR TECH</h1>
+      <p>Your Trusted Phone & Laptop Experts in Ile-Ife</p>
+      <a href="#contact" class="cta-btn">Get In Touch Now</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://www.icracked-it.com/wp-content/uploads/2021/10/advanced-phone-repair.jpg" alt="Professional Phone Repair"/>
+        <div class="service-info">
+          <h3>Phone Repairs</h3>
+          <p>Screen replacement, battery issues, software problems — we fix it all fast and affordably.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://spcdn.shortpixel.ai/spio/ret_img,q_cdnize/geeksoncommand.com/wp-content/uploads/2025/01/Laptop-Repair-Near-Me.jpg" alt="Expert Laptop Repair"/>
+        <div class="service-info">
+          <h3>Laptop Repairs</h3>
+          <p>Hardware upgrades, virus removal, keyboard fixes, and more for all laptop brands.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://www.mykioskey.com/wp-content/uploads/2024/03/cell-phone-store-3-3.jpg" alt="Buy Phones & Laptops"/>
+        <div class="service-info">
+          <h3>Buy Phones & Laptops</h3>
+          <p>We buy your used or new devices at the best market prices. Fair deals guaranteed!</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://midlandpcs.com/wp-content/uploads/2025/01/tg23ed6ye7du28ei922.jpg" alt="Sell Phones & Laptops"/>
+        <div class="service-info">
+          <h3>Sell Phones & Laptops</h3>
+          <p>Quality new and fairly used phones & laptops available at competitive prices.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/016/998/762/small/character-flat-drawing-two-hands-out-of-laptop-screen-to-exchange-shopping-bag-with-credit-card-sale-digital-payment-technology-online-store-and-trading-concept-cartoon-design-illustration-vector.jpg" alt="Swap Phones & Laptops"/>
+        <div class="service-info">
+          <h3>Swap Phones & Laptops</h3>
+          <p>Upgrade easily! Swap your old device for a better one with top-up options.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://www.cellsmartpos.com/hubfs/Blog%20Featured%20Images/CellSmart%20POS%20Blog/phone-repair-tools.webp" alt="Professional Tech Shop"/>
+        <div class="service-info">
+          <h3>Expert Service</h3>
+          <p>Years of experience, genuine parts, and customer satisfaction guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-img">
+      <img src="https://sc04.alicdn.com/kf/He22902b52dc943909bbaa8730718366e0.jpg" alt="Modern Tech Repair Shop Interior"/>
+    </div>
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>OLUWASEUN REPAIR TECH</strong> — your one-stop tech hub in Ile-Ife!<br/><br/>
+        We specialize in professional phone and laptop repairs, plus seamless buying, selling, and swapping of devices.
+        With years of experience and a passion for technology, we deliver fast, reliable, and affordable solutions to keep you connected.
+      </p>
+      <br/>
+      <p>
+        Visit us today and experience top-tier service with a smile!
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Visit or Contact Us</h2>
+    <p style="font-size:1.4rem; margin-bottom:3rem;">We're here to help — reach out anytime!</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Location</h3>
+        <p>Zone E, Block 17, Shop B<br/>
+        Central Market, OAU<br/>
+        Ile-Ife, Osun State</p>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <a href="https://wa.me/2348060998761">08060998761</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <h3>Call Us</h3>
+        <a href="tel:+2349127500342">09127500342</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <a href="mailto:folorunsoimole@gmail.com">folorunsoimole@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 OLUWASEUN REPAIR TECH. All rights reserved. | Powered by Excellence</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
